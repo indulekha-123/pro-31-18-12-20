@@ -8,6 +8,7 @@ var plinkos = [];
 var divisions =[];
 var divisionHeight=200;
 var score =0;
+var ground,divisions,particle,plinko;
 
 
 function setup() {
@@ -15,7 +16,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
-
+ division= new Divisions(width/2,height,width,20);
+ particle= new Particle(width/2,height,width,20);
+plinko= new Plinko(width/2,height,width,20);
 
    for (var k = 0; k <=width; k = k + 80) {
      divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
